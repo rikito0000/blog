@@ -3,9 +3,11 @@ class Article < ApplicationRecord
   validates :title, presence: true, length: { maximum: 50 }
   
   belongs_to :user
-  has_many :likes
-  has_many :stores
-  has_many :comments
+  has_many :likes, dependent: :destroy
+  has_many :stores, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  
+  mount_uploader :img, ImgUploader
    
   def like_count
     likes.count
