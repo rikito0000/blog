@@ -1,0 +1,22 @@
+<div class="container">
+<div class="row">
+    <aside class="col-sm-12">
+
+<%= form_with(model: @comment, url: article_comments_path(@comment.article), local: true) do |f| %>
+
+<div class="form-group">
+    
+<%= f.label :content, 'コメント' %>
+
+<%= f.text_area :content, class: 'form-control', rows: 3 %>
+
+        </div>
+
+        
+<%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+
+<% end %>
+
+    </aside>
+</div>
+</div>

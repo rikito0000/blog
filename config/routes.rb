@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :new, :create]
   
   resources :articles do
+    resources :comments,  only: [:new, :create]
     resource :like, only: [:create, :destroy]
     resource :store, only:  [:create, :destroy]
   end

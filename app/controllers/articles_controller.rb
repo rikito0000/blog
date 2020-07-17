@@ -2,9 +2,9 @@ class ArticlesController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:edit, :destroy, :update]
   
-
   def show
     @article = Article.find(params[:id])
+    @comments = @article.comments
   end
   
   def new 

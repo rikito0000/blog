@@ -12,13 +12,22 @@
 <div class="card mb-3">
  <div class="card-body">
     <p class="card-title">コメント</p> 
-    
+    <% @comments.each do |comment| %>
+      <div>
+     <%= comment.content %>
+     </div>
+    <% end %>
   </div>
  </div>
  
  <div class="mb-5">
      
 <%= render 'likes/like_btn', article: @article %>
+
+<%= link_to new_article_comment_path(@article) do %>
+  <i class="far fa-comment-dots fa-2x "></i>
+<% end %>
+
    
 <%= render 'stores/stores_btn', article: @article %>
 
