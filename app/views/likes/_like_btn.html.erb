@@ -1,0 +1,10 @@
+<% if current_user.like?(article) %>
+    <%= link_to  article_like_path(article), data: { method: 'delete' } do %>
+     <i class="fas fa-heart fa-2x mx-2"  style="color: #FF3333;"></i>
+    <% end %>
+  
+ <% else %>
+    <%= link_to  article_like_path(article), data: { method: 'post' } do %>
+      <i class="far fa-heart fa-2x mx-2"></i>
+    <% end %>
+ <% end %>
