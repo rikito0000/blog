@@ -1,0 +1,32 @@
+<div class="container mb-5 pb-5">
+  <div class="card mb-3">
+  <div class="card-body">
+     <p class="card-title">
+   
+         <%= @article.user.name %>
+    <h5 class="card-title"><%= @article.title %></h5> 
+    <p class="card-text"><%= @article.content %></p>
+    <p class="text-right"><%= render 'btn'%></p>
+  </div>
+  </div>
+<div class="card mb-3">
+ <div class="card-body">
+    <p class="card-title">コメント</p>
+    
+  </div>
+ </div>
+ 
+ <div class="mb-5">
+   
+
+
+ </div>
+ 
+
+</div>
+
+<%= render 'commons/footer' %>
+
+
+
+

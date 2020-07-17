@@ -1,8 +1,17 @@
 <% if logged_in? %>
 
-  <p>ログイン完了ユーザ: 
-<%= current_user.name %>
-</p>
+ <div class="container mb-5">
+    <div class="row">
+     <div class="col-sm-12 mb-5">
+      
+     <%= render 'commons/articles', articles: @articles %>
+    
+
+    </div>
+  </div>
+  
+  <%= render 'commons/footer' %>
+  
 <% else %>
 
   <div class="center jumbotron">
