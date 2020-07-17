@@ -4,10 +4,15 @@ class Article < ApplicationRecord
   
   belongs_to :user
   has_many :likes
+  has_many :stores
   
    
   def like_count
     likes.count
+  end
+  
+  def store_count
+    stores.count
   end
   
 end

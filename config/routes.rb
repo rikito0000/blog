@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   
   resources :articles do
     resource :like, only: [:create, :destroy]
+    resource :store, only:  [:create, :destroy]
   end
+  
+  resources :stores, only:  [:index]
 
 end
