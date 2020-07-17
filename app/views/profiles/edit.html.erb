@@ -1,0 +1,38 @@
+<div class="container">
+<div class="row">
+    <aside class="col-sm-12">
+
+<div>
+    
+</div>
+
+<%= form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f| %>
+
+
+<div class="form-group">
+    
+    <%= f.label :nickname, 'ニックネーム' %>
+
+    <%= f.text_field :nickname, class: 'form-control', rows:  1 , :placeholder => "Taro Tanaka" %>
+</div>
+        
+
+<div class="form-group">
+    
+<%= f.label :introduction, '自己紹介' %>
+          
+<%= f.text_area :introduction, class: 'form-control', rows: 5 , :placeholder => "私は日本で活動しています。" %>
+        </div>
+        
+
+
+        
+<%= f.submit 'Post', class: 'btn btn-dark btn-block' %>
+
+<% end %>
+
+    </aside>
+</div>
+ 
+ 
+</div>

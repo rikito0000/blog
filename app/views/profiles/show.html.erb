@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row mb-5">
+  <aside class="col-sm-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title text-center mt-2">
+        <% if current_user.profile&.nickname.nil? %>
+           <%= current_user.name%>
+        <% else %>
+          <%= current_user.profile.nickname %>
+        <% end %>
+        </h3>
+      </div>
+      <div class="card-body text-center mt-3">
+        <i class="fas fa-user fa-10x"></i>
+      </div>
+
+       <%=  link_to 'プロフィール編集', edit_profile_path,  class: 'btn btn-outline-primary mt-2' %>
+    </div>
+   </aside>
+  <div class="col-sm-8 mt-3">
+    <nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">自己紹介</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active my-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><%= current_user.profile.introduction %></div>
+</div>
+  
+
+  </div>
+</div>
+
+
+ 
+ <%= render 'commons/articles', articles: current_user.articles %>
+ 
+ <%= render 'commons/footer' %>
+</div>
+
+
+
+
+

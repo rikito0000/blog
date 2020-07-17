@@ -6,6 +6,7 @@ class User < ApplicationRecord
                    uniqueness: { case_sensitive: false }
   has_secure_password
   
+  has_one :profile
   has_many :articles, dependent: :destroy
   has_many :likes
   has_many :like_this, through: :likes, source: :article
@@ -44,6 +45,9 @@ class User < ApplicationRecord
     self.store_this.include?(article)
   end
   
+  def prepare_profile
+    profile || build_profile
+  end
   
   
 end
