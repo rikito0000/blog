@@ -1,0 +1,53 @@
+   
+   <section class="about py-5">
+         <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mb-3">About</h2>
+                   <p>みなさんの”こだわり”を共有してみましょう。
+                  　</p>
+                    <%= link_to 'read more', new_user_path, class: "btn btn-outline-primary mb-5" %>
+                </div>
+                <div class="col-md-6">
+                  <%= image_tag 'trip.jpg', class: "w-100" %>
+                </div>
+              </div>
+         </div>
+ </section>
+ <section class="service py-5 bg-light">
+          <div class="container">
+            <h2 class="text-center mb-3">Service</h2>
+            <p class="text-center mb-4">好きなものを共有して、新しい繋がりを作りましょう。</p>
+            <div class="card-deck">
+                   <div class="card">
+                    <%= image_tag 'works.jpg', class: "image" %>
+                  <div class="card-body">
+                    <h3 class="card-title">works</h3>
+                    <p class="card-text">あなたの作品をシェアしてみましょう。</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <%= image_tag 'sound.jpg', class: "image" %>
+                  <div class="card-body">
+                    <h3 class="card-title">sound</h3>
+                    <p class="card-text">あなたの好きな音楽はなんですか。</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <%= image_tag 'top2.jpg', class: "image" %>
+                  <div class="card-body">
+                    <h3 class="card-title">event</h3>
+                    <p class="card-text">イベントに参加して新しい発見をしませんか。</p>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+</section>
+      
+ <section class="contact my-5 py-5 ">
+    <div class="container">
+        <h2 class="mb-3 text-center" >Signup</h2>
+         <P class="text-center">新規アカウント登録は<%= link_to 'コチラ', new_user_path, class: "text-primary" %>から</P>
+
+ </section>

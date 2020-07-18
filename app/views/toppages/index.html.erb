@@ -11,15 +11,23 @@
   </div>
   
   <%= render 'commons/footer' %>
-  
+  </div>
 <% else %>
 
-  <div class="center jumbotron">
+ <div class="center jumbotron">
     <div class="text-center">
-      <h1>Welcome to the Microposts</h1>
+      <h4>異なる文化や芸術を称賛し、受け入れ、ただ楽しむ。</h4>
       
-<%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+<%= link_to 'Sign up now!', new_user_path, class: 'btn btn-outline-primary mt-2' %>
 
     </div>
   </div>
+  
+ <%= render 'toppage' %>
+
+<footer class="py-3  bg-light">
+   <div class="container">
+      <p class="text-right my-2">Copyright &copy 2020 IR</p>
+   </div>
+</footer>
 <% end %>

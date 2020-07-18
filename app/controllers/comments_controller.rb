@@ -8,7 +8,6 @@ class CommentsController < ApplicationController
     article = Article.find(params[:article_id])
     @comment = article.comments.build(comment_params)
     if @comment.save
-      flash[:success] = 'ユーザ登録しました。'
       redirect_to article_path(article)
     else
      render :new
