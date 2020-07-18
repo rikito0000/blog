@@ -1,12 +1,22 @@
 <div class="container mb-5 pb-5">
   <div class="card mb-3">
-  <div class="card-body">
-  <%= image_tag @article.img.url if @article.img? %>
-     <p class="card-title">
+  <div class="card-body row">
+    <p class="card-title">
+    <div col-md >
+      <p class="image">
+         <%= image_tag @article.img.url if @article.img? %>
+      </p>
+     
+　  <%= link_to user_path(@article.user)do %>
     <%= @article.user.name %>
-    <h5 class="card-title"><%= @article.title %></h5> 
-    <p class="card-text"><%= @article.content %></p>
-    <p class="text-right"><%= render 'btn'%></p>
+    <% end %>
+    </div>
+
+    <div col-md >
+    <h5 class="card-title text-wrap"><%= @article.title %></h5> 
+    <p class="card-text text-wrap"><%= @article.content %></p>
+    </div>
+    </p> 
   </div>
   </div>
 <div class="card mb-3">
@@ -30,6 +40,7 @@
 
    
 <%= render 'stores/stores_btn', article: @article %>
+ <%= render 'btn'%></p>
 
  </div>
  

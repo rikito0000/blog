@@ -1,23 +1,47 @@
-<div class="row">
+<div class="container">
+  <div class="row mb-5">
   <aside class="col-sm-4">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">
-<%= @user.name %>
-</h3>
+        <h3 class="card-title text-center mt-2">
+        <% if @user.profile&.nickname.nil? %>
+           <%= @user.name%>
+        <% else %>
+          <%= @user.profile.nickname %>
+        <% end %>
+        </h3>
       </div>
-      <div class="card-body">
-        <img class="rounded img-fluid" src="
-<%= gravatar_url(@user, { size: 500 }) %>
-" alt="">
+      <div class="card-body text-center mt-3">
+        <i class="fas fa-user fa-10x"></i>
       </div>
-    </div>
-  </aside>
-  <div class="col-sm-8">
-    <ul class="nav nav-tabs nav-justified mb-3">
-      <li class="nav-item"><a href="#" class="nav-link">Microposts</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Followings</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Followers</a></li>
-    </ul>
+       <% if  current_user == @user %>
+       <%=  link_to 'プロフィール編集', edit_profile_path,  class: 'btn btn-outline-primary mt-2' %>
+       <% end %>  
+       </div>
+   </aside>
+  <div class="col-sm-8 mt-3">
+    <nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">自己紹介</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active my-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+     <% if @user.profile&.introduction.nil? %>
+     <% else %>
+      <%= @user.profile.introduction %>
+     <% end %>
   </div>
 </div>
+  
+
+  </div>
+</div>
+
+
+ 
+ <%= render 'commons/articles', articles: @user.articles %>
+ 
+ <%= render 'commons/footer' %>
+</div>
+
