@@ -22,5 +22,10 @@ a {
 }
 
 
+.image img {
+  object-fit: cover;
+}
+
+
 
 
