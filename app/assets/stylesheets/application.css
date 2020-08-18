@@ -8,23 +8,29 @@ button {
   text-decoration: none; }
 
 a:hover {
-  text-decoration: underline; }
+  text-decoration: none; 
+  color: #333;
+  opacity: .7;
+}
 
 a {
   text-decoration: none;
-  color: #082b48; }
+  color: #333;
+  }
 
-.image {
-  display: bloak;
-  max-height: 100;
-  max-width: 100%; 
-  
+
+/*　トップページimage　*/
+.image-top {
+  width: 100%;
+  height: auto;
 }
 
-
+/*　投稿一覧image　*/
 .image img {
-  object-fit: cover;
+  object-fit: contain;
+  height: 297px;
 }
+
 
 
 

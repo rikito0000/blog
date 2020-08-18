@@ -6,7 +6,7 @@
       <%= link_to user_path(@article.user) do %>
           <h2 class="mb-3"><%= @article.user.name %></h2>
       <% end %>
-      <p class="image">
+      <p class="top-image">
          <%= image_tag @article.img.url if @article.img? %>
       </p>
     </div>
