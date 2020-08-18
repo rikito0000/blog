@@ -9,8 +9,8 @@ RSpec.describe Article, type: :model do
       password: 'example'
      })
       @article = user.articles.build({
-      title: Faker::Lorem.characters(number: 10),
-      content: Faker::Lorem.characters(number: 300)
+      title: Faker::Lorem.characters(number: 30),
+      content: Faker::Lorem.characters(number: 255)
      })
     end
     
