@@ -1,7 +1,4 @@
-
-
-
-$("#like-button-zone_<%= @current_user.id %>").html("<%= j(render partial: 'likes/like', locals: { user: @receiving_user }) %>");
-
+  /* ajaxでいいね */
+$("#like-button-zone_<%= @current_user.id %>").html("<%= j(render partial: 'likes/like', locals: { user: @current_user}) %>");
 $(".like_count").html("<%= @current_user.like_count %>")
 
