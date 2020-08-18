@@ -4,12 +4,7 @@ RSpec.describe Article, type: :model do
      let!(:user) { create(:user) }
     
   context 'タイトルと内容が入力されている場合' do 
-    let!(:article) do 
-      user.articles.build({
-      title: Faker::Lorem.characters(number: 30),
-      content: Faker::Lorem.characters(number: 255)
-     })
-    end
+    let!(:article) { build(:article, user: user) }
   
     
     it '記事を保存できる' do
@@ -18,13 +13,11 @@ RSpec.describe Article, type: :model do
   end
   
   context 'タイトルの文字が90字の場合' do
-     let!(:article) do 
-      user.articles.create({
-      title: Faker::Lorem.characters(number: 60),
-      content: Faker::Lorem.characters(number: 255)
-     })
-    end
+     let!(:article)  { build(:article, title: Faker::Lorem.characters(number: 60), user: user)}
     
+    before do
+      article.save
+    end
     it '記事を保存できない' do
       expect(article.errors.messages[:title][0]).to eq('is too long (maximum is 50 characters)')
     end
