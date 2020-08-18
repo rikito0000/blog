@@ -1,23 +1,37 @@
 
 .jumbotron {
-  background-image: url("top.jpg");
-  background-size: cover;
-  padding: 250px; }
+  background-image: url("top.jpg") no-repeat center center;
+  background-size: auto 500px;
+  padding: 250px; 
+  
+}
+
 
 button {
   text-decoration: none; }
 
 a:hover {
-  text-decoration: underline; }
+  text-decoration: none; 
+  color: #333;
+  opacity: .7;
+}
 
 a {
   text-decoration: none;
-  color: #082b48; }
+  color: #333;
+  }
 
-.image {
-  display: bloak;
-  max-height: 100;
-  max-width: 100%; 
+
+/*　トップページimage　*/
+.image-top {
+  width: 100%;
+  height: auto;
+}
+
+/*　投稿一覧image　*/
+.image img {
+  object-fit: contain;
+  height: 297px;
 }
 
 
