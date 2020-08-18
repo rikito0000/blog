@@ -1,11 +1,12 @@
-
+body {
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
 .jumbotron {
   background-image: url("top.jpg") no-repeat center center;
   background-size: auto 500px;
   padding: 250px; 
   
 }
-
 
 button {
   text-decoration: none; }
