@@ -2,7 +2,9 @@
 .jumbotron {
   background-image: url("top.jpg");
   background-size: cover;
-  padding: 250px; }
+  padding: 250px 0; 
+  
+}
 
 button {
   text-decoration: none; }
