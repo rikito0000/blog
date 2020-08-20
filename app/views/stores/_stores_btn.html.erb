@@ -1,10 +1,10 @@
 <% if current_user.store?(article) %>
-    <%= link_to  article_store_path(article), data: { method: 'delete' } do %>
+    <%= link_to  article_store_path(article), data: { method: 'delete' }, remote: true do %>
      <i class="fas fa-bookmark fa-2x mx-2"></i>
     <% end %>
   
  <% else %>
-    <%= link_to  article_store_path(article), data: { method: 'post' } do %>
+    <%= link_to  article_store_path(article), data: { method: 'post' }, remote: true  do %>
       <i class="far fa-bookmark fa-2x mx-2"></i>
     <% end %>
  <% end %>
