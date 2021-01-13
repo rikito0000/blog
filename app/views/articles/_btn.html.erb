@@ -1,11 +1,11 @@
 <% if current_user.articles.exists?(id: @article.id) %>
-<div class="btn-group">
- <i class="fas fa-ellipsis-h fa-2x" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-  <div class="dropdown-menu">
+  <div class="btn-group">
+    <i class="fas fa-ellipsis-h fa-2x" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+    <div class="dropdown-menu">
       <%= link_to '編集する', edit_article_path(@article), class: "dropdown-item" %>
       <%= link_to '削除する', article_path(@article), class: "dropdown-item", data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' } %>
+    </div>
   </div>
-</div>
 <% end %>
 
 
