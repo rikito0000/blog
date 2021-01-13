@@ -1,43 +1,22 @@
 <div class="container">
-<div class="row">
+  <div class="row">
     <aside class="col-sm-12">
-
-<%= form_with(model: @article, local: true) do |f| %>
-
-<%= render 'layouts/error_messages', model: f.object %>
-
-<div class="form-group">
-    
-<%= f.label :title, 'タイトル' %>
-
-<%= f.text_area :title, class: 'form-control', rows: 2 %>
-
+      <%= form_with(model: @article, local: true) do |f| %>
+        <%= render 'layouts/error_messages', model: f.object %>
+        <div class="form-group">
+          <%= f.label :title, 'タイトル' %>
+          <%= f.text_area :title, class: 'form-control', rows: 2 %>
         </div>
-        
-
-<div class="form-group">
-    
-<%= f.label :content, '本文' %>
-          
-<%= f.text_area :content, class: 'form-control', rows: 5 %>
-
+        <div class="form-group">
+          <%= f.label :content, '本文' %>
+          <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
-        
-              
-<div class="form-group">
-    
-<%= f.label :img, '写真' %>
-          
-<%= f.file_field :img, class: 'form-control', rows: 5 %>
-
+        <div class="form-group">
+        <%= f.label :img, '写真' %>
+          <%= f.file_field :img, class: 'form-control', rows: 5 %>
         </div>
-        
-
-<%= f.submit 'Post', class: 'btn btn-primary btn-block'  %>
-
-<% end %>
-
+          <%= f.submit 'Post', class: 'btn btn-primary btn-block'  %>
+      <% end %>
     </aside>
-</div>
- 
+  </div>
 </div>

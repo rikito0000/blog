@@ -27,10 +27,10 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-    flash[:success] = '更新しました'
+      flash[:success] = '更新しました'
       redirect_to article_path(@article)
     else
-      flash.now[:error] = '更新に失敗しました'
+      flash.now[:danger] = '更新に失敗しました'
       render :edit
     end
   end
@@ -47,7 +47,6 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:content, :title, :img)
   end
-  
   
   def correct_user
     @article = current_user.articles.find_by(id: params[:id])
