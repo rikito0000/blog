@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:content, :title, :img)
+    params.require(:article).permit(:content, :title)
   end
   
   def correct_user
