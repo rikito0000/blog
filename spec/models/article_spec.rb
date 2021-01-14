@@ -13,16 +13,14 @@ RSpec.describe Article, type: :model do
     end
   end
   
-  
-  context 'タイトルの文字が100文字の場合' do
+  context 'タイトルの文字が100字の場合' do
+     let!(:article) { build(:article, title: Faker::Lorem.characters(number: 100), user: user)}
     
-     let!(:article) { build(:article, title: Faker::Lorem.characters(number: 100), user: user) }
-     
-     before do
-       article.save
-     end
+    before do
+      article.save
+    end
     
-    it '投稿を保存できない' do
+    it '記事を保存できない' do
       expect(article.errors.messages[:title][0]).to eq('は50文字以内で入力してください')
     end
   end 
