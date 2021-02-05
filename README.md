@@ -18,7 +18,7 @@ http://share-culture.herokuapp.com/
 ・投稿を保存する機能
 ・プロフィール機能
 
-# 機能一覧
+# 環境・使用技術
 フロントエンド
 ・Bootstrap
 ・JavaScript、jQuery、Ajax
