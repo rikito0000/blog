@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+写真投稿アプリケーションです。
+既存のアプリケーションを真似て作りました。
 
-Things you may want to cover:
+# URL
+http://share-culture.herokuapp.com/
 
-* Ruby version
+# 制作の背景
+自身の周りにモノづくりをしている友人が多かったので、制作したものを写真として投稿できるアプリを試しに作ってみようという思いつきから作成しました。
 
-* System dependencies
+# 機能一覧
+・ユーザ登録機能
+・ログイン機能
+・投稿機能
+・いいね機能
+・投稿を保存する機能
+・プロフィール機能
 
-* Configuration
+# 機能一覧
+フロントエンド
+・Bootstrap
+・JavaScript、jQuery、Ajax
 
-* Database creation
+バックエンド
+・Ruby 2.6.3
+・Rails 5.2.4.3
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+開発環境
+・MySQL2
