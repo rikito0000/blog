@@ -14,10 +14,11 @@ a:hover {
   opacity: .7;
 }
 
-a {
-  text-decoration: none;
-  color: #333;
-  }
+.navname {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
 
 
 /*　トップページimage　*/
@@ -31,7 +32,5 @@ a {
   object-fit: contain;
   height: 297px;
 }
-
-
 
 
