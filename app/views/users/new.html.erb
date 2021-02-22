@@ -9,25 +9,25 @@
     <div class="form-group">
       <span class="badge badge-danger font-weight-light">必須</span> 
       <%= f.label :name, '名前' %>
-      <%= f.text_field :name, class: 'form-control', required: true %>
+      <%= f.text_field :name, class: 'form-control', placeholder: '例：シェアカル', required: true %>
     </div>
     
     <div class="form-group">
       <span class="badge badge-danger font-weight-light">必須</span> 
       <%= f.label :email, 'メールアドレス' %>
-      <%= f.email_field :email, class: 'form-control', required: true  %>
+      <%= f.email_field :email, class: 'form-control', placeholder: '例：sharecul123@example.com', required: true  %>
     </div>
     
     <div class="form-group">
       <span class="badge badge-danger font-weight-light">必須</span> 
       <%= f.label :password, 'パスワード' %>
-      <%= f.password_field :password, class: 'form-control', required: true %>
+      <%= f.password_field :password, class: 'form-control', placeholder: '例：sharecul123', required: true %>
     </div>
     
     <div class="form-group">
       <span class="badge badge-danger font-weight-light">必須</span> 
       <%= f.label :password_confirmation, 'パスワード（確認用）' %>
-      <%= f.password_field :password_confirmation, class: 'form-control', required: true  %>
+      <%= f.password_field :password_confirmation, class: 'form-control', required: true %>
     </div>
     
       <%= f.submit '新規登録', class: 'btn btn-primary btn-block' %>

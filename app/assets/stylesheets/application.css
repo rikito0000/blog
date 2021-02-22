@@ -8,11 +8,16 @@
 button {
   text-decoration: none; }
 
-a:hover {
+a:hover{
   text-decoration: none; 
   color: #333;
   opacity: .7;
 }
+
+a:link {
+  color: #333;
+}
+
 
 .navname {
   font-weight: bold;
