@@ -1,6 +1,6 @@
 <header class="mb-4">
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand" href="/">シェアカル</a>
+    <a class="navbar-brand navname" href="/">シェアカル</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,15 +22,10 @@
             </ul>
         
 <% else %>
-
-
-        <li class="nav-item"><%= link_to 'Signup', signup_path, class: 'nav-link' %></li>
-     
-     
+  <li class="nav-item"><%= link_to 'Signup', signup_path, class: 'nav-link' %></li>
 <li class="nav-item">
 <%= link_to 'Login', login_path, class: 'nav-link' %>
 </li>
-
 <% end %>
       </ul>
     </div>
