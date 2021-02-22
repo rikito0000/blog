@@ -5,17 +5,21 @@
   
 }
 
-button {
-  text-decoration: none; }
 
-a:hover{
+button {
+  text-decoration: none; 
+  
+}
+
+a {
+  color: #333
+}
+
+
+a:hover {
   text-decoration: none; 
   color: #333;
   opacity: .7;
-}
-
-a:link {
-  color: #333;
 }
 
 
@@ -38,4 +42,14 @@ a:link {
   height: 297px;
 }
 
+
+.image-good {
+  transition: all 0.4s;
+}
+
+
+.image-good:hover {
+  transform: scale(1.1);
+  border-width: 2px;
+}
 
